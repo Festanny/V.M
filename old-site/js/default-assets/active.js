@@ -1,13 +1,13 @@
 (function ($) {
     'use strict';
 
-    var akame_window = $(window);
+    var vm_window = $(window);
 
     // ****************************
     // :: 1.0 Preloader Active Code
     // ****************************
 
-    akame_window.on('load', function () {
+    vm_window.on('load', function () {
         $('#preloader').fadeOut('1000', function () {
             $(this).remove();
         });
@@ -18,7 +18,7 @@
     // ****************************
 
     if ($.fn.classyNav) {
-        $('#akameNav').classyNav();
+        $('#vmNav').classyNav();
     }
 
     // *********************************
@@ -91,36 +91,24 @@
         });
     }
 
-    // ****************************
-    // :: 6.0 Portfolio Active Code
-    // ****************************
-    if ($.fn.imagesLoaded) {
-        $('.akame-portfolio-area, .akame-blog-masonary').imagesLoaded(function () {
-            // filter items on button click
-            $('.portfolio-menu').on('click', 'button', function () {
-                var filterValue = $(this).attr('data-filter');
-                $grid.isotope({
-                    filter: filterValue
-                });
-            });
-            // init Isotope
-            var $grid = $('.akame-portfolio-area, .akame-blog-masonary').isotope({
-                itemSelector: '.akame-portfolio-item, .akame-blog-masonary-item',
-                percentPosition: true,
-                masonry: {
-                    columnWidth: '.akame-portfolio-item, .akame-blog-masonary-item'
-                }
-            });
-        });
-    }
-
-    // *********************************
-    // :: 7.0 Portfolio Menu Active Code
-    // *********************************
     $('.portfolio-menu button.btn').on('click', function () {
         $('.portfolio-menu button.btn').removeClass('active');
         $(this).addClass('active');
-    })
+
+        var id = $(this).attr('data-filter'),
+            content = $('.vm-portfolio .vm-portfolio-area .vm-portfolio-item[data-filter="' + id + '"]');
+
+        if (id == '*') {
+            // $('.vm-portfolio .vm-portfolio-area .vm-portfolio-item').fadeIn();
+            $('.vm-portfolio .vm-portfolio-area .vm-portfolio-item').addClass('active');
+        } else {
+            // $('.vm-portfolio .vm-portfolio-area .vm-portfolio-item.active').fadeOut();
+            $('.vm-portfolio .vm-portfolio-area .vm-portfolio-item.active').removeClass('active');
+            content.addClass('active');
+            // content.fadeIn();
+        }
+        
+    });
 
     // *********************************
     // :: 8.0 Magnific Popup Active Code
@@ -147,7 +135,7 @@
     // ***********************
     // :: 10.0 WOW Active Code
     // ***********************
-    if (akame_window.width() > 767) {
+    if (vm_window.width() > 767) {
         new WOW().init();
     }
 
@@ -164,7 +152,7 @@
     // :: 12.0 Scrollup Active Code
     // ****************************
     if ($.fn.scrollUp) {
-        akame_window.scrollUp({
+        vm_window.scrollUp({
             scrollSpeed: 1500,
             scrollText: '<i class="arrow_carrot-up"</i>'
         });

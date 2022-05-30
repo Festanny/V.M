@@ -401,6 +401,7 @@ section {
 	height: 380px;
 	width: auto;
 	position: relative;
+	margin-bottom: 15px;
 }
 
 .why-choose-us-area .info-block .choose-us-thumbnail img {
@@ -422,4 +423,26 @@ section {
 
 .why-choose-us-area .info-block .desc {
 	flex: 1;
+}
+
+.why-choose-us-area .choose-us-content ul li {
+	position: relative;
+	padding-left: 30px;
+}
+
+.why-choose-us-area .choose-us-content ul li:not(:last-of-type) {
+	margin-bottom: 15px;
+}
+
+.why-choose-us-area .choose-us-content ul li::before {
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background-image: url('../img/check.svg');
+	background-size: contain;
+	background-position: center;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
 }

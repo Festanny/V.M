@@ -46,7 +46,7 @@ gulp.task('scripts', function () {
     './src/js/default-assets/audioplayer.js',
     'node_modules/jquery-countdown/dist/jquery.countdown.min.js'
   ])
-        .pipe(concat('akame.bundle.js'))
+        .pipe(concat('vm.bundle.js'))
         .pipe(gulp.dest('./src/js/'))
 });
 

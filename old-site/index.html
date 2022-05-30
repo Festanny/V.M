@@ -7,21 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>V.M Nails</title>
-    <link rel="icon" href="./img/core-img/favicon.ico">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
-    <div id="preloader">
-        <div class="loader"></div>
+    <div class="preloader">
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
     </div>
 
+    <header>
         <div class="main-header-area">
             <div class="classy-nav-container breakpoint-off">
                 <div class="container">
-                    <nav class="classy-navbar justify-content-between" id="akameNav">
-
+                    <nav class="classy-navbar" id="vmNav">
                         <a class="nav-brand" href="index.html"><img src="./img/core-img/logo.png" alt=""></a>
 
                         <div class="classy-navbar-toggler">
@@ -29,11 +33,6 @@
                         </div>
 
                         <div class="classy-menu">
-
-                            <div class="classycloseIcon">
-                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                            </div>
-
                             <div class="classynav">
                                 <ul id="nav">
                                     <li class="active"><a href="./index.html">Главная</a></li>
@@ -41,16 +40,13 @@
                                     <li><a href="./service.html">Услуги</a></li>
                                     <li><a href="./contact.html">Контакты</a></li>
                                 </ul>
-
-                                <div class="cart-icon ml-5 mt-4 mt-lg-0">
-                                    <a href="#"><i class="icon_cart"></i></a>
-                                </div>
-
-                                <div class="book-now-btn ml-5 mt-4 mt-lg-0 ml-md-4">
-                                    <a href="#" class="btn akame-btn">Забронировать</a>
+                                <a href="#" class="lk">
+                                    <img src="img/lk.svg" alt="">
+                                </a>
+                                <div class="book-now-btn">
+                                    <a class="btn vm-btn">Забронировать</a>
                                 </div>
                             </div>
-
                         </div>
                     </nav>
                 </div>
@@ -58,142 +54,98 @@
         </div>
     </header>
 
-    <section class="welcome-area">
-        <div class="welcome-slides owl-carousel">
-
-            <div class="single-welcome-slide bg-img" style="background-image: url(img/bg-img/16.jpg);">
-
-                <div class="welcome-content h-100">
-                    <div class="container h-100">
-                        <div class="row h-100 align-items-center">
-
-                            <div class="col-12 col-md-9 col-lg-6">
-                                <div class="welcome-text">
-                                    <h2 data-animation="fadeInUp" data-delay="100ms">Отдай свою красоту <br> в надежные руки</h2>
-                                    <p data-animation="fadeInUp" data-delay="400ms">Я - профессиональный мастер ногтей, и я точно знаю как придать стиля твоим прекрасным рукам!</p>
-                                    <a href="./service.html" class="btn akame-btn" data-animation="fadeInUp" data-delay="700ms">Услуги</a>
-                                </div>
+    <section class="welcome-area-block">
+        <div class="info-block">
+            <img src="img/bg-img/16.jpg" alt="">
+                <div class="welcome-content">
+                    <div class="container">
+                        <div class="col-12 col-md-9 col-lg-6">
+                            <div class="welcome-text">
+                                <h2 data-animation="fadeInUp" data-delay="100ms">Отдай свою красоту <br> в надежные руки</h2>
+                                <p data-animation="fadeInUp" data-delay="400ms">Я - профессиональный мастер ногтей, и я точно знаю как придать стиля твоим прекрасным рукам!</p>
+                                <a href="./service.html" class="btn vm-btn" data-animation="fadeInUp" data-delay="700ms">Услуги</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
     </section>
 
-
-
-    <section class="akame-about-area section-padding-80-0">
+    <section class="vm-about-area">
         <div class="container">
-            <div class="row align-items-center">
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="section-heading mb-80">
-                        <h2>Салон маникюра</h2>
-                        <p>Профессиональный сертифицированный мастер</p>
-                        <span>Салон Маникюра</span>
-                    </div>
+            <div class="info-block">
+                <div class="section-heading">
+                    <h2>Салон маникюра</h2>
+                    <p>Профессиональный сертифицированный мастер</p>
+                    <span>Салон Маникюра</span>
                 </div>
-
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="about-us-thumbnail mb-80">
-                        <img src="img/bg-img/15.jpg" alt="">
-                    </div>
+                <div class="about-us-thumbnail">
+                    <img src="img/bg-img/15.jpg" alt="">
                 </div>
-
-
-                <div class="col-12 col-lg-4">
-                    <div class="about-us-content mb-80 pl-4">
-                        <h3>Только профессиональное оборудование</h3>
-                        <p>Я выполняю свою работу только на профессиональном оборудовании и постоянно учусь чему-то новому, именно поэтому мои клиенты всегда следуют трендам моды</p>
-                    </div>
+                <div class="about-us-content">
+                    <h3>Только профессиональное оборудование</h3>
+                    <p>Я выполняю свою работу только на профессиональном оборудовании и постоянно учусь чему-то новому, именно поэтому мои клиенты всегда следуют трендам моды</p>
                 </div>
             </div>
         </div>
     </section>
 
-
     <div class="container">
         <div class="border-top mt-3"></div>
     </div>
 
-
-    <section class="akame-service-area section-padding-80-0">
+    <section class="vm-service-area section-padding-80-0">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-
                     <div class="section-heading text-center">
                         <h2>Наши услуги</h2>
                         <p>Ниже будет перечислен список услуг, что мы предоставляем</p>
                     </div>
                 </div>
             </div>
-
-            <div class="row">
-
-
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-service-area mb-80 wow fadeInUp" data-wow-delay="200ms">
-                        <img src="img/core-img/s1.png" alt="">
-                        <h5>Покрытие лаком</h5>
-                        <p>Покрытие своих и нарощенных ногтей профессиональным гель-лаком</p>
-                    </div>
+            <div class="info-block">
+                <div class="single-service-area wow fadeInUp" data-wow-delay="200ms">
+                    <img src="img/core-img/s1.png" alt="">
+                    <h5>Покрытие лаком</h5>
+                    <p>Покрытие своих и нарощенных ногтей профессиональным гель-лаком</p>
                 </div>
-
-
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-service-area mb-80 wow fadeInUp" data-wow-delay="400ms">
-                        <img src="img/core-img/s3.png" alt="">
-                        <h5>Наращивание</h5>
-                        <p>Наращивание ногтей уникальным и быстрым способом</p>
-                    </div>
+                <div class="single-service-area wow fadeInUp" data-wow-delay="400ms">
+                    <img src="img/core-img/s3.png" alt="">
+                    <h5>Наращивание</h5>
+                    <p>Наращивание ногтей уникальным и быстрым способом</p>
                 </div>
-
-
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-service-area mb-80 wow fadeInUp" data-wow-delay="600ms">
-                        <img src="img/core-img/s4.png" alt="">
-                        <h5>Педикюр</h5>
-                        <p>Покрытие и уход за вашими ногтями на ногах</p>
-                    </div>
+                <div class="single-service-area wow fadeInUp" data-wow-delay="600ms">
+                    <img src="img/core-img/s4.png" alt="">
+                    <h5>Педикюр</h5>
+                    <p>Покрытие и уход за вашими ногтями на ногах</p>
                 </div>
-
-
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-service-area mb-80 wow fadeInUp" data-wow-delay="800ms">
-                        <img src="img/core-img/s5.png" alt="">
-                        <h5>Френч</h5>
-                        <p>Совершенно новая формула нанесения френча</p>
-                    </div>
+                <div class="single-service-area wow fadeInUp" data-wow-delay="800ms">
+                    <img src="img/core-img/s5.png" alt="">
+                    <h5>Френч</h5>
+                    <p>Совершенно новая формула нанесения френча</p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section class="why-choose-us-area bg-gray section-padding-80-0">
+    <section class="why-choose-us-area">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-lg-6">
-                    <div class="choose-us-thumbnail mt-30 mb-80">
-                        <div class="choose-us-img bg-img" style="background-image: url(img/bg-img/4.jpg);"></div>
-                    </div>
+            <div class="info-block">
+                <div class="choose-us-thumbnail">
+                    <img src="img/bg-img/4.jpg" alt="" class="choose-us-img">
                 </div>
-                <div class="col-12 col-lg-6">
-
+                <div class="desc">
                     <div class="section-heading">
                         <h2>Почему именно я</h2>
                         <p>Я - профессиональный мастер маникюра и я точно знаю, что вам нужно, вот несколько причин, почему вы должны выбрать именно меня:</p>
                     </div>
-
-                    <div class="choose-us-content mt-30 mb-80">
+                    <div class="choose-us-content">
                         <ul>
-                            <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Выполнение не больше 2 часов</li>
-                            <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Профессиональный сертифицированный мастер</li>
-                            <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Щадящий прейскурант</li>
-                            <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Бесплатная консультация</li>
+                            <li>Выполнение не больше 2 часов</li>
+                            <li>Профессиональный сертифицированный мастер</li>
+                            <li>Щадящий прейскурант</li>
+                            <li>Бесплатная консультация</li>
                         </ul>
                     </div>
                 </div>
@@ -201,7 +153,7 @@
         </div>
     </section>
 
-    <section class="akame-portfolio section-padding-80 clearfix">
+    <section class="vm-portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -214,111 +166,83 @@
         </div>
 
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="portfolio-menu text-center mb-30">
-                        <button class="btn active" data-filter="*">Всё</button>
-                        <button class="btn" data-filter=".haircuts">Наращивание</button>
-                        <button class="btn" data-filter=".dye">Аппаратный маникюр</button>
-                        <button class="btn" data-filter=".shave">Френч</button>
-                        <button class="btn" data-filter=".hairstyle">Комбинированный маникюр</button>
-                    </div>
+            <div class="info-block">
+                <div class="portfolio-menu">
+                    <button class="btn active" data-filter="*">Всё</button>
+                    <button class="btn" data-filter=".haircuts">Наращивание</button>
+                    <button class="btn" data-filter=".dye">Аппаратный маникюр</button>
+                    <button class="btn" data-filter=".shave">Френч</button>
+                    <button class="btn" data-filter=".hairstyle">Комбинированный маникюр</button>
                 </div>
             </div>
-
-            <div class="row akame-portfolio-area">
-                <div class="col-12 col-sm-6 col-lg-3 akame-portfolio-item haircuts mb-30 wow fadeInUp" data-wow-delay="200ms">
-                    <div class="akame-portfolio-single-item">
+            <div class="vm-portfolio-area">
+                <div class="vm-portfolio-item haircuts wow fadeInUp active" data-wow-delay="200ms" data-filter=".haircuts">
+                    <div class="vm-portfolio-single-item">
                         <img src="img/bg-img/5.jpg" alt="">
-
-                        <div class="overlay-content d-flex align-items-center justify-content-center">
-                            <div class="overlay-text text-center">
-                                <h4>Наращивание</h4>
-                                <p>Наращивание + маникюр</p>
-                            </div>
+                        <div class="overlay-text">
+                            <h4>Наращивание</h4>
+                            <p>Наращивание + маникюр</p>
                         </div>
-
                         <a href="img/bg-img/5.jpg" class="thumbnail-zoom"><i class="icon_search"></i></a>
                     </div>
                 </div>
-
-                <div class="col-12 col-sm-6 akame-portfolio-item dye mb-30 wow fadeInUp" data-wow-delay="300ms">
-                    <div class="akame-portfolio-single-item">
+                <div class="vm-portfolio-item dye wow fadeInUp active" data-wow-delay="300ms"data-filter=".dye">
+                    <div class="vm-portfolio-single-item">
                         <img src="img/bg-img/6.jpg" alt="">
-
-                        <div class="overlay-content d-flex align-items-center justify-content-center">
-                            <div class="overlay-text text-center">
-                                <h4>Маникюр</h4>
-                                <p>Аппаратный маникюр</p>
-                            </div>
+                        <div class="overlay-text">
+                            <h4>Маникюр</h4>
+                            <p>Аппаратный маникюр</p>
                         </div>
-
                         <a href="img/bg-img/6.jpg" class="thumbnail-zoom"><i class="icon_search"></i></a>
                     </div>
                 </div>
-
-                <div class="col-12 col-lg-3 akame-portfolio-item shave mb-30 wow fadeInUp" data-wow-delay="400ms">
-                    <div class="akame-portfolio-single-item">
+                <div class="vm-portfolio-item shave wow fadeInUp active" data-wow-delay="400ms" data-filter=".shave">
+                    <div class="vm-portfolio-single-item">
                         <img src="img/bg-img/7.jpg" alt="">
-
-                        <div class="overlay-content d-flex align-items-center justify-content-center">
-                            <div class="overlay-text text-center">
-                                <h4>Френч</h4>
-                                <p>Формула идеального френча</p>
-                            </div>
+                        <div class="overlay-text">
+                            <h4>Френч</h4>
+                            <p>Формула идеального френча</p>
                         </div>
-
                         <a href="img/bg-img/7.jpg" class="thumbnail-zoom"><i class="icon_search"></i></a>
                     </div>
                 </div>
-
-                <div class="col-12 col-sm-6 col-lg-3 akame-portfolio-item hairstyle mb-30 wow fadeInUp" data-wow-delay="500ms">
-                    <div class="akame-portfolio-single-item">
+                <div class="vm-portfolio-item hairstyle wow fadeInUp active" data-wow-delay="500ms" data-filter=".hairstyle">
+                    <div class="vm-portfolio-single-item">
                         <img src="img/bg-img/8.jpg" alt="">
-
-                        <div class="overlay-content d-flex align-items-center justify-content-center">
-                            <div class="overlay-text text-center">
-                                <h4>Комбинированный</h4>
-                                <p>Красивый</p>
-                            </div>
+                        <div class="overlay-text">
+                            <h4>Комбинированный</h4>
+                            <p>Красивый</p>
                         </div>
-
                         <a href="img/bg-img/8.jpg" class="thumbnail-zoom"><i class="icon_search"></i></a>
                     </div>
                 </div>
-
-                <div class="col-12 col-sm-6 col-lg-3 akame-portfolio-item dye mb-30 wow fadeInUp" data-wow-delay="600ms">
-                    <div class="akame-portfolio-single-item">
+                <div class="vm-portfolio-item dye wow fadeInUp active" data-wow-delay="600ms" data-filter=".dye">
+                    <div class="vm-portfolio-single-item">
                         <img src="img/bg-img/9.jpg" alt="">
-
-                        <div class="overlay-content d-flex align-items-center justify-content-center">
-                            <div class="overlay-text text-center">
-                                <h4>Наращивание + дизайн</h4>
-                                <p>Тоже красиво</p>
-                            </div>
+                        <div class="overlay-text">
+                            <h4>Наращивание + дизайн</h4>
+                            <p>Тоже красиво</p>
                         </div>
-
                         <a href="img/bg-img/9.jpg" class="thumbnail-zoom"><i class="icon_search"></i></a>
                     </div>
                 </div>
             </div>
-
     </section>
 
     <div class="container">
         <div class="border-top mt-3"></div>
     </div>
 
-    <section class="akame-cta-area bg-gray section-padding-80">
+    <section class="vm-cta-area bg-gray section-padding-80">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-10 col-xl-5">
                     <div class="cta-content">
                         <h2>Сделай <br>свой выбор</h2>
                         <p>Мы дорожим каждым нашим клиентом, запишись к нам на маникюр и сама в этом убедишься!</p>
-                        <div class="akame-btn-group mt-30">
-                            <a href="https://ru.wikipedia.org/wiki/Чевапчичи" class="btn akame-btn active mr-3 mb-3 mb-sm-0">Забронировать</a>
-                            <a href="./contact.html" class="btn akame-btn">Контакты</a>
+                        <div class="vm-btn-group mt-30">
+                            <a href="https://ru.wikipedia.org/wiki/Чевапчичи" class="btn vm-btn active mr-3 mb-3 mb-sm-0">Забронировать</a>
+                            <a href="./contact.html" class="btn vm-btn">Контакты</a>
                         </div>
                     </div>
                 </div>
@@ -375,10 +299,11 @@
         </div>
     </footer>
 
-    <script src="js/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/akame.bundle.js"></script>
+    <script src="js/vm.bundle.js"></script>
     <script src="js/default-assets/active.js"></script>
 
 </body>
