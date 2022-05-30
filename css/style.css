@@ -314,7 +314,7 @@ section {
 	flex: 1;
 }
 
-.section-heading {
+.vm-about-area .section-heading {
 	margin-right: 15px;
 	position: relative;
 }
@@ -382,11 +382,19 @@ section {
 	object-fit: contain;
 }
 
+.why-choose-us-area {
+	background-color: #f6f9f9;
+}
+
 .why-choose-us-area .info-block {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
+}
+
+.why-choose-us-area .info-block .desc {
+	margin-left: 60px;
 }
 
 .why-choose-us-area .info-block .choose-us-thumbnail {
