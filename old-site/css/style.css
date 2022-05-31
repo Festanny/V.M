@@ -606,3 +606,44 @@ section {
 footer {
 	padding: 80px 0;
 }
+
+footer .info-block {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+footer .info-block .single-footer-widget {
+	flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.single-footer-widget .widget-title,
+.single-footer-widget .footer-logo {
+	margin-bottom: 30px;
+}
+
+.single-footer-widget .footer-logo {
+	display: block;
+}
+
+.single-footer-widget p {
+	margin-bottom: 8px;
+}
+
+.single-footer-widget .social-info a.instagram {
+	display: block;
+	background-image: url('../img/inst.svg');
+	background-repeat: no-repeat;
+	background-position: calc(50% - 0px) calc(50% - 1px);
+	background-size: 18px;
+	background-color: #057ad7;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	transition: all .3s;
+}
+
+.single-footer-widget .social-info a.instagram:hover {
+	background-color: var(--btn-hover);
+}
