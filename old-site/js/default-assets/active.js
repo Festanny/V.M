@@ -99,13 +99,10 @@
             content = $('.vm-portfolio .vm-portfolio-area .vm-portfolio-item[data-filter="' + id + '"]');
 
         if (id == '*') {
-            // $('.vm-portfolio .vm-portfolio-area .vm-portfolio-item').fadeIn();
             $('.vm-portfolio .vm-portfolio-area .vm-portfolio-item').addClass('active');
         } else {
-            // $('.vm-portfolio .vm-portfolio-area .vm-portfolio-item.active').fadeOut();
             $('.vm-portfolio .vm-portfolio-area .vm-portfolio-item.active').removeClass('active');
             content.addClass('active');
-            // content.fadeIn();
         }
         
     });
