@@ -201,6 +201,10 @@ section {
 	}
 }
 
+header {
+	border-bottom: 1px solid var(--border-gray);
+}
+
 .classy-navbar {
 	display: flex;
 	justify-content: space-between;
@@ -635,7 +639,7 @@ footer .info-block .single-footer-widget {
 	display: block;
 	background-image: url('../img/inst.svg');
 	background-repeat: no-repeat;
-	background-position: calc(50% - 0px) calc(50% - 1px);
+	background-position: 50% calc(50% - 1px);
 	background-size: 18px;
 	background-color: #057ad7;
 	width: 40px;
@@ -646,4 +650,81 @@ footer .info-block .single-footer-widget {
 
 .single-footer-widget .social-info a.instagram:hover {
 	background-color: var(--btn-hover);
+}
+
+.breadcrumb-area .breadcrumb-content {
+	text-align: center;
+}
+
+.breadcrumb-area .breadcrumb-content .breadcrumb {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+}
+
+.breadcrumb-area .breadcrumb-content .breadcrumb .breadcrumb-arrow {
+	width: 17px;
+	height: 10px;
+	object-fit: contain;
+	margin: 0 8px;
+}
+
+.breadcrumb-content h2 {
+	margin-bottom: 15px;
+	font-size: 60px;
+}
+
+.breadcrumb-area .breadcrumb-home a {
+	display: block;
+	position: relative;
+	padding-left: 20px;
+	transition: all .3s;
+}
+
+.breadcrumb-area .breadcrumb-home a::before {
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	background-image: url('../img/home.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.breadcrumb-area .breadcrumb-home a:hover {
+	color: var(--text-h);
+}
+
+.vm-service-area {
+	border-top: 1px solid var(--border-gray);
+	padding: 0;
+}
+
+.vm-service-area .single--service--item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.vm-service-area .single--service--item .service-text,
+.vm-service-area .single--service--item .service-thumbnail {
+	width: 50%;
+}
+
+.single--service--item .service-text h2 {
+	font-size: 42px;
+    margin-bottom: 40px;
+}
+
+.vm-service-area .single--service--item .service-text {
+	padding: 80px 0;
+}
+
+.vm-service-area .single--service--item .service-thumbnail {
+	background-image: url('../')
 }
