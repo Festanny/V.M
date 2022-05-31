@@ -8,6 +8,7 @@
 	--border: #252525;
 	--border-gray: #e5e5e5;
 	--p: #6e6e6e;
+	--bg-gray: #f6f9f9;
 }
 
 html,
@@ -384,7 +385,7 @@ section {
 }
 
 .why-choose-us-area {
-	background-color: #f6f9f9;
+	background-color: var(--bg-gray);
 }
 
 .why-choose-us-area .info-block {
@@ -563,4 +564,41 @@ section {
     left: 0%;
     z-index: 1;
     content: '';
+}
+
+.vm-cta-area {
+	display: flex;
+	background-color: var(--bg-gray);
+	position: relative;
+}
+
+.vm-cta-area .info-block {
+	width: 40%;
+}
+
+.vm-cta-area .info-block h2 {
+	margin-bottom: 30px;
+}
+
+.vm-cta-area .info-block .vm-btn-group {
+	margin-top: 30px;
+}
+
+.vm-cta-area .info-block .vm-btn-group .btn.active {
+	background-color: var(--btn-hover);
+	color: var(--text-w);
+	border-color: var(--btn-hover);
+}
+
+.vm-cta-area .cta-thumbnail {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	background-image: url('../img/bg-img/cta.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
