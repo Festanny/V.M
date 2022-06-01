@@ -23,25 +23,25 @@
     <section class="auth">
         <div class="info-block">
             <div class="block formBlockMain">
-                <h2>Авторизация</h2>
-                <form action="" method="POST" class="vm-auth-form" id="auth-form">
-                    <div class="row">
-                        <div class="formBlock">
-                            <input type="email" name="email" class="form-control" placeholder="E-mail">
+                <div class="formBlockHForm">
+                    <h2>Авторизация</h2>
+                    <form action="" method="POST" class="vm-auth-form" id="auth-form">
+                        <div class="formBlock iconAuth">
+                            <input type="email" id="nameAuth" name="email" class="form-control" placeholder="E-mail">
                         </div>
-                        <div class="formBlock">
-                            <input type="password" name="password" class="form-control" placeholder="Пароль">
+                        <div class="formBlock iconAuth">
+                            <input type="password" id="passAuth" name="password" class="form-control" placeholder="Пароль">
                         </div>
                         <div class="formBlock adt-form">
-                            <label for="checkForm"><input type="checkbox" id="checkForm">dfdfdf</label>
+                            <label for="checkForm"><input type="checkbox" id="checkForm" name="check">Запомнить</label>
                             <a href="#">Забыли пароль?</a>
                         </div>
                         <div class="btn-send">
                             <button type="submit" class="btn">Войти</button>
                         </div>
-                    </div>
-                </form>
-                <span>У вас еще нет аккаунта? <a href="#">Зарегистрируйте!</a></span>
+                    </form>
+                </div>
+                <span class="notAcc">У вас еще нет аккаунта? <a href="#">Зарегистрируйте!</a></span>
             </div>
             <div class="block"></div>
         </div>

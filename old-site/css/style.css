@@ -1,3 +1,51 @@
+@font-face {
+	font-family: 'Muller';
+	src: url('../fonts/Muller/MullerLight.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Muller';
+	src: url('../fonts/Muller/MullerRegular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Muller';
+	src: url('../fonts/Muller/MullerMedium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Muller';
+	src: url('../fonts/Muller/MullerBold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Muller';
+	src: url('../fonts/Muller/MullerBlack.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Muller';
+	src: url('../fonts/Muller/MullerExtraBold.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
 :root {
 	--bg: #ffffff;
 	--text: #252525;
@@ -9,6 +57,7 @@
 	--border-gray: #e5e5e5;
 	--p: #6e6e6e;
 	--bg-gray: #f6f9f9;
+	--input: #D9D9D9;
 }
 
 html,
@@ -810,7 +859,8 @@ footer .info-block .single-footer-widget {
 	padding: 16px 20px;
 }
 
-.vm-contact-area .form-control:focus {
+.vm-contact-area .form-control:focus,
+.auth .info-block .block.formBlockMain form .formBlock input:focus {
 	border-color: var(--btn-hover);
 	box-shadow: none;
 }
@@ -839,6 +889,7 @@ footer .info-block .single-footer-widget {
 	display: flex;
 	justify-content: space-between;
 	min-height: 100vh;
+	font-family: 'Muller', 'Arial', sans-serif;
 }
 
 .auth .info-block .block {
@@ -848,4 +899,96 @@ footer .info-block .single-footer-widget {
 
 .auth .info-block .block.formBlockMain h2 {
 	font-size: 40px;
+	font-weight: 300;
+	margin-bottom: 80px;
+	font-family: 'Muller', 'Arial', sans-serif;
+}
+
+.auth .info-block .block.formBlockMain {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 144px;
+	text-align: center;
+}
+
+.auth .info-block .block.formBlockMain .notAcc {
+	margin-top: 36px;
+}
+
+.auth .info-block .block.formBlockMain .notAcc a {
+	margin-left: 16px;
+	color: #ab5757;
+	font-weight: 500;
+}
+
+.auth .info-block .block.formBlockMain .adt-form {
+	display: flex;
+	justify-content: space-between;
+}
+
+.auth .info-block .block.formBlockMain form {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.auth .info-block .block.formBlockMain form .formBlock.iconAuth {
+	position: relative;
+	width: 100%;
+}
+
+.auth .info-block .block.formBlockMain form .formBlock {
+	width: 100%;
+	margin-bottom: 32px;
+}
+
+.auth .info-block .block.formBlockMain form .formBlock input {
+	border: 0;
+	border-radius: 0;
+	border-bottom: 2px solid var(--input);
+	padding: 10px 60px;
+}
+
+.auth .info-block .block.formBlockMain form .formBlock.iconAuth::before {
+	content: '';
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	top: 50%;
+	left: 10px;
+	transform: translateY(-50%);
+}
+
+.auth .info-block .block.formBlockMain form .formBlock.iconAuth:nth-of-type(1)::before {
+	background-image: url('../img/mailAuth.svg');
+}
+.auth .info-block .block.formBlockMain form .formBlock.iconAuth:nth-of-type(2)::before {
+	background-image: url('../img/password.svg');
+}
+
+.auth .info-block .block.formBlockMain form .formBlock #checkForm {
+	margin-right: 8px;
+}
+
+.auth .info-block .block.formBlockMain form .btn-send .btn {
+	font-family: 'Muller', 'Arial', sans-serif;
+	text-transform: none;
+	font-size: 20px;
+	font-weight: 500;
+	padding: 8px 80px;
+	margin-top: 32px;
+	background-color: var(--border);
+	border-color: var(--border);
+	color: var(--border-gray);
+}
+
+.auth .info-block .block:last-of-type {
+    background-image: url(../img/bg-img/ctaBrown.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+	background-color: #200f07;
 }
