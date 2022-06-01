@@ -1,42 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>V.M Nails | Контакты</title>
-    <link rel="icon" href="./img/core-img/favicon.ico">
-    <link rel="stylesheet" href="style.css">
-
+    <title>V.M Nails</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div id="preloader">
-        <div class="loader"></div>
+    <div class="preloader">
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
     </div>
+
+    <header>
         <div class="main-header-area">
             <div class="classy-nav-container breakpoint-off">
                 <div class="container">
-                    <!-- Classy Menu -->
-                    <nav class="classy-navbar justify-content-between" id="vmNav">
-
-                        <!-- Logo -->
+                    <nav class="classy-navbar" id="vmNav">
                         <a class="nav-brand" href="index.html"><img src="./img/core-img/logo.png" alt=""></a>
 
-                        <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
                             <span class="navbarToggler"><span></span><span></span><span></span></span>
                         </div>
 
-                        <!-- Menu -->
                         <div class="classy-menu">
-                            <!-- Menu Close Button -->
-                            <div class="classycloseIcon">
-                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                            </div>
-                            <!-- Nav Start -->
                             <div class="classynav">
                                 <ul id="nav">
                                     <li><a href="./index.html">Главная</a></li>
@@ -44,185 +38,116 @@
                                     <li><a href="./service.html">Услуги</a></li>
                                     <li class="active"><a href="./contact.html">Контакты</a></li>
                                 </ul>
-
-                                <!-- Cart Icon -->
-                                <div class="cart-icon ml-5 mt-4 mt-lg-0">
-                                    <a href="#"><i class="icon_cart"></i></a>
-                                </div>
-
-                                <!-- Book Icon -->
-                                <div class="book-now-btn ml-5 mt-4 mt-lg-0 ml-md-4">
-                                    <a href="#" class="btn vm-btn">Забронировать</a>
+                                <a href="./page/auth.html" class="lk">
+                                    <img src="img/lk.svg" alt="">
+                                </a>
+                                <div class="book-now-btn">
+                                    <a class="btn vm-btn">Забронировать</a>
                                 </div>
                             </div>
-                            <!-- Nav End -->
                         </div>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
-    <!-- Header Area End -->
 
-    <!-- Google Maps Start -->
     <div class="vm-google-maps-area">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2389.1655084441295!2d50.61345168443492!3d53.21488072122658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41660e81aa912ac1%3A0xf3a6d9ffef16bba2!2z0KHQstC10YLQu9Cw0Y8g0YPQuy4sIDEwNiwg0JrQuNC90LXQu9GMLCDQodCw0LzQsNGA0YHQutCw0Y8g0L7QsdC7LiwgNDQ2NDM1!5e0!3m2!1sru!2sru!4v1653658885271!5m2!1sru!2sru" allowfullscreen></iframe>
     </div>
-    <!-- Google Maps End -->
 
-    <!-- Contact Information Area Start -->
-    <section class="contact-information-area section-padding-80-0">
+    <section class="contact-information-area">
         <div class="container">
-            <div class="row">
-                <!-- Single Contact Information -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-contact-information mb-80">
-                        <i class="icon_phone"></i>
-                        <h4>Телефон</h4>
-                        <p>+7 (999) 949-34-13</p>
-                    </div>
+            <div class="info-block">
+                <div class="single-contact-information">
+                    <img src="img/phone.svg" alt="">
+                    <h4>Телефон</h4>
+                    <p>+7 (999) 949-34-13</p>
                 </div>
-
-                <!-- Single Contact Information -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-contact-information mb-80">
-                        <i class="icon_pin"></i>
-                        <h4>Адрес</h4>
-                        <p>Ул. Светлая, 106</p>
-                    </div>
+                <div class="single-contact-information">
+                    <img src="img/location.svg" alt="">
+                    <h4>Адрес</h4>
+                    <p>Ул. Светлая, 106</p>
                 </div>
-
-                <!-- Single Contact Information -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-contact-information mb-80">
-                        <i class="icon_clock"></i>
-                        <h4>Время работы</h4>
-                        <p>12:00-21:00</p>
-                    </div>
+                <div class="single-contact-information">
+                    <img src="img/time.svg" alt="">
+                    <h4>Время работы</h4>
+                    <p>12:00-21:00</p>
                 </div>
-
-                <!-- Single Contact Information -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-contact-information mb-80">
-                        <i class="icon_mail"></i>
-                        <h4>Почта</h4>
-                        <p>vm@nails.com</p>
-                    </div>
+                <div class="single-contact-information">
+                    <img src="img/mail.svg" alt="">
+                    <h4>Почта</h4>
+                    <p>vm@nails.com</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Contact Information Area End -->
 
-    <!-- Contact Area Start -->
-    <section class="vm-contact-area bg-gray section-padding-80">
+    <section class="vm-contact-area">
         <div class="container">
             <div class="row">
-                <!-- Section Heading -->
-                <div class="col-12">
-                    <div class="section-heading text-center">
-                        <h2>Обратная связь</h2>
-                        <p>Я отвечу вам так быстро, насколько это возможно</p>
-                    </div>
+                <div class="section-heading">
+                    <h2>Обратная связь</h2>
+                    <p>Я отвечу вам так быстро, насколько это возможно</p>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-12">
-                    <!-- Form -->
-                    <form action="#" method="post" class="vm-contact-form border-0 p-0">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <input type="text" name="message-name" class="form-control mb-30" placeholder="Ваше имя">
-                            </div>
-                            <div class="col-lg-6">
-                                <input type="email" name="message-email" class="form-control mb-30" placeholder="Почта">
-                            </div>
-                            <div class="col-12">
-                                <textarea name="message" class="form-control mb-30" placeholder="Напишите ваше предложение"></textarea>
-                            </div>
-                            <div class="col-12 text-center">
-                                <button type="submit" class="btn vm-btn btn-3 mt-15 active">Отправить</button>
-                            </div>
+                <form action="" method="POST" class="vm-contact-form" id="contact-form">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <input type="text" name="name" class="form-control" placeholder="Ваше имя">
                         </div>
-                    </form>
-                </div>
+                        <div class="col-lg-6">
+                            <input type="email" name="email" class="form-control" placeholder="Почта">
+                        </div>
+                        <div class="col-12">
+                            <textarea name="message" class="form-control" placeholder="Напишите ваше предложение"></textarea>
+                        </div>
+                        <div class="col-12 btn-send">
+                            <button type="submit" class="btn vm-btn active">Отправить</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
-    <!-- Contact Area End -->
 
-    <!-- Footer Area Start -->
-    <footer class="footer-area section-padding-80-0">
-        <div class="container">
-            <div class="row justify-content-between">
-
-               <!-- Single Footer Widget -->
-               <div class="col-12 col-sm-6 col-md-4">
-                <div class="single-footer-widget mb-80">
-                    <!-- Footer Logo -->
-                    <a href="#" class="footer-logo"><img src="img/core-img/logo.png" alt=""></a>
-
-                    <p class="mb-30">Я - профессиональный мастер ногтей, и я точно знаю как придать стиля твоим прекрасным рукам!</p>
-
-                    <!-- Copywrite Text -->
-                    <div class="copywrite-text">
-                    </div>
+<footer class="footer-area">
+    <div class="container">
+        <div class="info-block">
+            <div class="single-footer-widget">
+                <a class="footer-logo"><img src="img/core-img/logo.png" alt=""></a>
+                <p>Я - профессиональный мастер ногтей, и я точно знаю как придать стиля твоим прекрасным рукам!</p>
+                <div class="copywrite-text">
                 </div>
             </div>
-
-            <!-- Single Footer Widget -->
-            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-                <div class="single-footer-widget mb-80">
-                    <!-- Widget Title -->
-                    <h4 class="widget-title">Режим работы</h4>
-
-                    <!-- Open Times -->
-                    <div class="open-time">
-                        <p>Понедельник-Суббота: 12.00 - 21.00</p>
-                        <p>Воскресенье: выходной</p>
-                    </div>
-
-                    <!-- Social Info -->
-                    <div class="social-info">
-                        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                    </div>
+            <div class="single-footer-widget">
+                <h4 class="widget-title">Режим работы</h4>
+                <div class="open-time">
+                    <p>Понедельник-Суббота: 12.00 - 21.00</p>
+                    <p>Воскресенье: выходной</p>
+                </div>
+                <div class="social-info">
+                    <a href="#" class="instagram"></a>
                 </div>
             </div>
-
-            <!-- Single Footer Widget -->
-            <div class="col-12 col-md-4 col-xl-3">
-                <div class="single-footer-widget mb-80">
-
-                    <!-- Widget Title -->
-                    <h4 class="widget-title">Контакты</h4>
-
-                    <!-- Contact Address -->
-                    <div class="contact-address">
-                        <p>Телефон: +7 (999) 999-99-99</p>
-                        <p>E-mail: vm@nails.com</p>
-                        <p>Адрес: Ул. Светлая 106</p>
-                    </div>
+            <div class="single-footer-widget">
+                <h4 class="widget-title">Контакты</h4>
+                <div class="contact-address">
+                    <p>Телефон: +7 (999) 999-99-99</p>
+                    <p>E-mail: vm@nails.com</p>
+                    <p>Адрес: Ул. Светлая 106</p>
                 </div>
             </div>
-
         </div>
     </div>
 </footer>
-<!-- Footer Area End -->
 
-<!-- All JS Files -->
-<!-- jQuery -->
-<script src="js/jquery.min.js"></script>
-<!-- Popper -->
-<script src="js/popper.min.js"></script>
-<!-- Bootstrap -->
-<script src="js/bootstrap.min.js"></script>
-<!-- All Plugins -->
-<script src="js/vm.bundle.js"></script>
-<!-- Active -->
-<script src="js/default-assets/active.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 
 </body>
-
 </html>
