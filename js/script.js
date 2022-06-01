@@ -31,3 +31,18 @@ window.onload = function () {
        el.style.display = 'block';
     });
 };
+
+$('.portfolio-menu button.btn').on('click', function () {
+    $('.portfolio-menu button.btn').removeClass('active');
+    $(this).addClass('active');
+
+    var id = $(this).attr('data-filter'),
+        content = $('.vm-portfolio .vm-portfolio-area .vm-portfolio-item[data-filter="' + id + '"]');
+
+    if (id == '*') {
+        $('.vm-portfolio .vm-portfolio-area .vm-portfolio-item').addClass('active');
+    } else {
+        $('.vm-portfolio .vm-portfolio-area .vm-portfolio-item.active').removeClass('active');
+        content.addClass('active');
+    }
+});
