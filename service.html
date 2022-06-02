@@ -42,7 +42,7 @@
                                     <img src="img/lk.svg" alt="">
                                 </a>
                                 <div class="book-now-btn">
-                                    <a class="btn vm-btn">Забронировать</a>
+                                    <a class="btn vm-btn" data-bs-toggle="modal" data-bs-target="#bookingModal">Забронировать</a>
                                 </div>
                             </div>
                         </div>
@@ -103,41 +103,132 @@
 
     </section>
 
-    <footer class="footer-area">
-        <div class="container">
-            <div class="info-block">
-                <div class="single-footer-widget">
-                    <a class="footer-logo"><img src="img/core-img/logo.png" alt=""></a>
-                    <p>Я - профессиональный мастер ногтей, и я точно знаю как придать стиля твоим прекрасным рукам!</p>
-                    <div class="copywrite-text">
-                    </div>
+<footer class="footer-area">
+    <div class="container">
+        <div class="info-block">
+            <div class="single-footer-widget">
+                <a class="footer-logo"><img src="img/core-img/logo.png" alt=""></a>
+                <p>Я - профессиональный мастер ногтей, и я точно знаю как придать стиля твоим прекрасным рукам!</p>
+                <div class="copywrite-text">
                 </div>
-                <div class="single-footer-widget">
-                    <h4 class="widget-title">Режим работы</h4>
-                    <div class="open-time">
-                        <p>Понедельник-Суббота: 12.00 - 21.00</p>
-                        <p>Воскресенье: выходной</p>
-                    </div>
-                    <div class="social-info">
-                        <a href="#" class="instagram"></a>
-                    </div>
+            </div>
+            <div class="single-footer-widget">
+                <h4 class="widget-title">Режим работы</h4>
+                <div class="open-time">
+                    <p>Понедельник-Суббота: 12.00 - 21.00</p>
+                    <p>Воскресенье: выходной</p>
                 </div>
-                <div class="single-footer-widget">
-                    <h4 class="widget-title">Контакты</h4>
-                    <div class="contact-address">
-                        <p>Телефон: +7 (999) 999-99-99</p>
-                        <p>E-mail: vm@nails.com</p>
-                        <p>Адрес: Ул. Светлая 106</p>
-                    </div>
+                <div class="social-info">
+                    <a href="#" class="instagram"></a>
+                </div>
+            </div>
+            <div class="single-footer-widget">
+                <h4 class="widget-title">Контакты</h4>
+                <div class="contact-address">
+                    <p>Телефон: +7 (999) 999-99-99</p>
+                    <p>E-mail: vm@nails.com</p>
+                    <p>Адрес: Ул. Светлая 106</p>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+<!-- Модальное окно -->
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <!-- <div class="modal-body">
+                <div class="text">
+                    <h3>Бронь</h3>
+                    <span>Ваша бронь отобразится в вашем личном кабинете</span>
+                </div>
+                <div class="form">
+                    <form action="" method="POST" class="vm-modal-form" id="modal-form">
+                        <div class="infoLkBlock">
+                            <div class="formBlock">
+                                <label>Дата:</label>
+                                <input type="date" name="date" class="form-control">
+                            </div>
+                            <div class="formBlock">
+                                <label>Тип услуги:</label>
+                                <select name="service">
+                                    <option value="Наращивание ногтей">Наращивание ногтей</option>
+                                    <option value="Аппараный маникюр">Аппараный маникюр</option>
+                                    <option value="Педикюр">Педикюр</option>
+                                </select>
+                            </div>
+                            <div class="formBlock">
+                                <label>Время:</label>
+                                <input type="time" name="time" class="form-control">
+                            </div>
+                        </div>
+                        <div class="btn-send">
+                            <button type="submit" class="btn btn-lk">Забронировать</button>
+                            <div class="response" id="response-lk">Бронь успешно создана!</div>
+                        </div>
+                    </form>
+                </div>
+            </div> -->
+            <div class="modal-body">
+                <div class="text">
+                    <h3>Бронь</h3>
+                    <span>После бронирования вам будет выдан личный кабинет с бронью</span>
+                </div>
+                <div class="form">
+                    <form action="" method="POST" class="vm-modal-form noAuth" id="modal-form">
+                        <div class="infoLkBlock">
+                            <div class="formBlock">
+                                <label>Дата:</label>
+                                <input type="date" name="date" class="form-control">
+                            </div>
+                            <div class="formBlock">
+                                <label>Тип услуги:</label>
+                                <select name="service">
+                                    <option value="Наращивание ногтей">Наращивание ногтей</option>
+                                    <option value="Аппараный маникюр">Аппараный маникюр</option>
+                                    <option value="Педикюр">Педикюр</option>
+                                </select>
+                            </div>
+                            <div class="formBlock">
+                                <label>Время:</label>
+                                <input type="time" name="time" class="form-control">
+                            </div>
+                            <div class="formBlock">
+                                <label>Имя:</label>
+                                <input type="text" name="name" class="form-control" placeholder="Имя">
+                            </div>
+                            <div class="formBlock">
+                                <label>E-mail:</label>
+                                <input type="email" name="email" class="form-control" placeholder="Имя">
+                            </div>
+                            <div class="formBlock">
+                                <label>Пароль:</label>
+                                <input type="password" name="password" class="form-control" placeholder="Пароль">
+                            </div>
+                            <div class="formBlock">
+                                <label>Повторите пароль:</label>
+                                <input type="password" name="password2" class="form-control" placeholder="Повторите пароль">
+                            </div>
+                        </div>
+                        <div class="btn-send">
+                            <button type="submit" class="btn btn-lk">Забронировать</button>
+                            <div class="response" id="response-lk">Бронь успешно создана!</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 
 </body>
 </html>

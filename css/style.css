@@ -621,12 +621,6 @@ header {
     content: '';
 }
 
-.lk-block .info-block .panel span.active::before {
-	width: 60%;
-	left: 50%;
-	transform: translateX(-50%);
-}
-
 .vm-cta-area {
 	display: flex;
 	background-color: var(--bg-gray);
@@ -870,7 +864,9 @@ footer .info-block .single-footer-widget {
 
 .vm-contact-area .form-control:focus,
 .auth .info-block .block.formBlockMain form .formBlock input:focus,
-.lk-block .info-block .info form .formBlock input:focus {
+.lk-block .info-block .info form .formBlock input:focus,
+.modal .modal-body .form .infoLkBlock input:focus,
+.modal .modal-body .form .infoLkBlock select:focus {
 	border-color: var(--btn-hover);
 	box-shadow: none;
 }
@@ -968,7 +964,8 @@ footer .info-block .single-footer-widget {
 }
 
 .auth .info-block .block.formBlockMain form .formBlock input,
-.lk-block .info-block .info form .formBlock input {
+.lk-block .info-block .info form .formBlock input,
+.modal .modal-body .form .infoLkBlock input {
 	border: 0;
 	border-radius: 0;
 	border-bottom: 2px solid var(--input);
@@ -1005,7 +1002,8 @@ footer .info-block .single-footer-widget {
 }
 
 .auth .info-block .block.formBlockMain form .btn-send .btn,
-.lk-block .info-block .info form .btn.btn-lk {
+.lk-block .info-block .info form .btn.btn-lk,
+.btn.btn-lk {
 	font-family: 'Muller', 'Arial', sans-serif;
 	text-transform: none;
 	font-size: 20px;
@@ -1075,7 +1073,8 @@ footer .info-block .single-footer-widget {
 	min-height: 810px;
 }
 
-.lk-block .info-block .info form .formBlock input {
+.lk-block .info-block .info form .formBlock input,
+.modal .modal-body .form .infoLkBlock input {
 	padding: 3px 0;
 	font-weight: bold;
 }
@@ -1130,7 +1129,8 @@ footer .info-block .single-footer-widget {
 	text-align: center;
 }
 
-.lk-block .info-block .info form label {
+.lk-block .info-block .info form label,
+.modal .modal-body .form .infoLkBlock label {
 	color: var(--p);
 	font-weight: 300;
 }
@@ -1140,7 +1140,8 @@ footer .info-block .single-footer-widget {
 	width: calc(50% - 35px);
 }
 
-.lk-block .info-block .info form .infoUser .formBlock {
+.lk-block .info-block .info form .infoUser .formBlock,
+.modal .modal-body .form .infoLkBlock .formBlock {
 	margin-bottom: 24px;
 }
 
@@ -1219,4 +1220,70 @@ footer .info-block .single-footer-widget {
 
 .lk-block .info-block .block.booking .block-booking .info-block-booking .blockTextBooking span:not(:nth-of-type(2)) {
 	flex: 3;
+}
+
+.modal .modal-dialog {
+	max-width: 556px;
+}
+.modal .modal-header {
+	position: relative;
+}
+.modal .modal-header .btn-close {
+	cursor: pointer;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+}
+.modal .modal-body {
+	font-family: 'Muller', 'Arial', sans-serif;
+	padding: 48px 73px;
+}
+
+.modal .modal-body h3 {
+	font-family: 'Muller', 'Arial', sans-serif;
+	font-weight: 500;
+	margin-bottom: 8px;
+}
+
+.modal .modal-body .text {
+	text-align: center;
+	margin-bottom: 74px;
+}
+
+.modal .modal-body .text span {
+	display: block;
+	width: 70%;
+	margin: 0 auto;
+}
+
+.modal .modal-content {
+	border-radius: 41px;
+}
+
+.modal .modal-body .form .btn-send {
+	text-align: center;
+	margin-top: 150px;
+}
+
+.modal .modal-body .form .btn-send .btn-lk {
+	margin: 0;
+}
+
+.modal .modal-body .form .infoLkBlock .formBlock {
+	display: flex;
+	flex-direction: column;
+}
+
+.modal .modal-body .form .infoLkBlock select {
+	border: 0;
+	border-radius: 6px;
+	border: 1px solid var(--text);
+	padding: 14px 17px;
+	margin-top: 8px;
+	outline: none;
+	font-size: 16px;
+}
+
+.modal .modal-body .noAuth .btn-send {
+	margin-top: 83px;
 }
