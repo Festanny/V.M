@@ -7,12 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>V.M Nails</title>
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="../favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
             <div class="classy-nav-container breakpoint-off">
                 <div class="container">
                     <nav class="classy-navbar" id="vmNav">
-                        <a class="nav-brand" href="index.html"><img src="./img/core-img/logo.png" alt=""></a>
+                        <a class="nav-brand" href="../index.html"><img src="../img/core-img/logo.png" alt=""></a>
 
                         <div class="classy-navbar-toggler">
                             <span class="navbarToggler"><span></span><span></span><span></span></span>
@@ -34,13 +34,12 @@
                         <div class="classy-menu">
                             <div class="classynav">
                                 <ul id="nav">
-                                    <li class="active"><a href="./index.html">Главная</a></li>
-                                    </li>
-                                    <li><a href="./service.html">Услуги</a></li>
-                                    <li><a href="./contact.html">Контакты</a></li>
+                                    <li><a href="../index.html">Главная</a></li>
+                                    <li><a href="../service.html">Услуги</a></li>
+                                    <li><a href="../contact.html">Контакты</a></li>
                                 </ul>
-                                <a href="#" class="lk">
-                                    <img src="img/lk.svg" alt="">
+                                <a href="../page/auth.html" class="lk">
+                                    <img src="../img/lk.svg" alt="">
                                 </a>
                                 <div class="book-now-btn">
                                     <a class="btn vm-btn">Забронировать</a>
@@ -53,231 +52,156 @@
         </div>
     </header>
 
-    <section class="welcome-area-block">
-        <div class="info-block">
-            <img src="img/bg-img/16.jpg" alt="">
-                <div class="welcome-content">
-                    <div class="container">
-                        <div class="col-12 col-md-9 col-lg-6">
-                            <div class="welcome-text">
-                                <h2 data-animation="fadeInUp" data-delay="100ms">Отдай свою красоту <br> в надежные руки</h2>
-                                <p data-animation="fadeInUp" data-delay="400ms">Я - профессиональный мастер ногтей, и я точно знаю как придать стиля твоим прекрасным рукам!</p>
-                                <a href="./service.html" class="btn vm-btn" data-animation="fadeInUp" data-delay="700ms">Услуги</a>
+    <section class="lk-block">
+        <div class="container">
+            <div class="info-block">
+                <div class="panel">
+                    <span data-lk="1" class="active">Профиль</span>
+                    <span data-lk="2">Безопасность</span>
+                    <span data-lk="3">Бронь</span>
+                </div>
+                <div class="info">
+                    <div class="block active" data-lk="1">
+                        <form action="" method="POST" class="vm-auth-form" id="lk-form-name">
+                            <div class="infoLkBlock">
+                                <div class="img">
+                                    <div class="imgUser">
+                                        <img src="../img/bg-img/16.jpg" alt="">
+                                    </div>
+                                    <div>
+                                        <label for="imgFileLk" class="btn btn-lk">Загрузить фото</label>
+                                        <input type="file" id="imgFileLk">
+                                    </div>
+                                    <div>
+                                        <div class="del btn">Удалить</div>
+                                    </div>
+                                </div>
+                                <div class="infoUser">
+                                    <div class="col-lk">
+                                        <div class="formBlock iconAuth">
+                                            <label>Фамилия:</label>
+                                            <input type="text" name="surname" class="form-control" placeholder="Фамилия">
+                                        </div>
+                                        <div class="formBlock iconAuth">
+                                            <label>Имя:</label>
+                                            <input type="text" name="name" class="form-control" placeholder="Имя">
+                                        </div>
+                                        <div class="formBlock iconAuth">
+                                            <label>Отчество:</label>
+                                            <input type="text" name="patronymic" class="form-control" placeholder="Отчество">
+                                        </div>
+                                        <div class="formBlock iconAuth">
+                                            <label>Дата рождения:</label>
+                                            <input type="date" name="date" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lk">
+                                        <div class="formBlock iconAuth">
+                                            <label>E-mail:</label>
+                                            <input type="email" name="name" class="form-control" placeholder="E-mail">
+                                        </div>
+                                        <div class="formBlock iconAuth">
+                                            <label>Телефон:</label>
+                                            <input type="phone" name="patronymic" class="form-control" placeholder="Телефон">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-send">
+                                <button type="submit" class="btn btn-lk">Сохранить изменения</button>
+                                <div class="response" id="response-lk">Изменения успешно сохранены!</div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="block" data-lk="2">
+                        <form action="" method="POST" class="vm-auth-form" id="lk-form-pass">
+                            <div class="infoLkBlock">
+                                <div class="img">
+                                    <div class="imgUser">
+                                        <img src="../img/bg-img/16.jpg" alt="">
+                                    </div>
+                                    <div>
+                                        <label for="imgFileLk" class="btn btn-lk">Загрузить фото</label>
+                                        <input type="file" id="imgFileLk">
+                                    </div>
+                                    <div>
+                                        <div class="del btn">Удалить</div>
+                                    </div>
+                                </div>
+                                <div class="infoUser">
+                                    <div class="col-lk">
+                                        <div class="formBlock iconAuth">
+                                            <label>Текущий пароль:</label>
+                                            <input type="password" name="surname" class="form-control" placeholder="Текущий пароль">
+                                        </div>
+                                        <div class="formBlock iconAuth">
+                                            <label>Новый пароль:</label>
+                                            <input type="password" name="name" class="form-control" placeholder="Новый пароль">
+                                        </div>
+                                        <div class="formBlock iconAuth">
+                                            <label>Повторите пароль:</label>
+                                            <input type="password" name="patronymic" class="form-control" placeholder="Повторите пароль">
+                                        </div>
+                                    </div>
+                                    <div class="col-lk">
+                                        <div class="formBlock iconAuth">
+                                            <label>E-mail:</label>
+                                            <input type="email" name="name" class="form-control" placeholder="E-mail">
+                                        </div>
+                                        <div class="formBlock iconAuth">
+                                            <label>Телефон:</label>
+                                            <input type="phone" name="patronymic" class="form-control" placeholder="Телефон">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-send">
+                                <button type="submit" class="btn btn-lk">Сохранить изменения</button>
+                                <div class="response" id="response-lk">Изменения успешно сохранены!</div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="block booking" data-lk="3">
+                        <div class="block-booking active-booking">
+                            <h4>Активные брони:</h4>
+                            <div class="info-block-booking">
+                                <div class="blockTextBooking">
+                                    <span>17 января, 2021 | 12:00</span>
+                                    <span>12:00</span>
+                                    <span>Наращивание ногтей</span>
+                                </div>
+                                <div class="blockTextBooking">
+                                    <span>17 января, 2021 | 12:00</span>
+                                    <span>12:00</span>
+                                    <span>Наращивание ногтей</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-booking past-booking">
+                            <h4>Прошедшие брони:</h4>
+                            <div class="info-block-booking">
+                                <div class="blockTextBooking">
+                                    <span>17 января, 2021 | 12:00</span>
+                                    <span>12:00</span>
+                                    <span>Аппаратный маникюр</span>
+                                </div>
+                                <div class="blockTextBooking">
+                                    <span>17 января, 2021 | 12:00</span>
+                                    <span>12:00</span>
+                                    <span>Педикюр</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-    </section>
-
-    <section class="vm-about-area">
-        <div class="container">
-            <div class="info-block">
-                <div class="section-heading">
-                    <h2>Салон маникюра</h2>
-                    <p>Профессиональный сертифицированный мастер</p>
-                    <span>Салон Маникюра</span>
-                </div>
-                <div class="about-us-thumbnail">
-                    <img src="img/bg-img/15.jpg" alt="">
-                </div>
-                <div class="about-us-content">
-                    <h3>Только профессиональное оборудование</h3>
-                    <p>Я выполняю свою работу только на профессиональном оборудовании и постоянно учусь чему-то новому, именно поэтому мои клиенты всегда следуют трендам моды</p>
-                </div>
-            </div>
         </div>
     </section>
-
-    <div class="container">
-        <div class="border-top mt-3"></div>
-    </div>
-
-    <section class="vm-service-area vm-service-area-main">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading text-center">
-                        <h2>Наши услуги</h2>
-                        <p>Ниже будет перечислен список услуг, что мы предоставляем</p>
-                    </div>
-                </div>
-            </div>
-            <div class="info-block">
-                <div class="single-service-area wow fadeInUp" data-wow-delay="200ms">
-                    <img src="img/core-img/s1.png" alt="">
-                    <h5>Покрытие лаком</h5>
-                    <p>Покрытие своих и нарощенных ногтей профессиональным гель-лаком</p>
-                </div>
-                <div class="single-service-area wow fadeInUp" data-wow-delay="400ms">
-                    <img src="img/core-img/s3.png" alt="">
-                    <h5>Наращивание</h5>
-                    <p>Наращивание ногтей уникальным и быстрым способом</p>
-                </div>
-                <div class="single-service-area wow fadeInUp" data-wow-delay="600ms">
-                    <img src="img/core-img/s4.png" alt="">
-                    <h5>Педикюр</h5>
-                    <p>Покрытие и уход за вашими ногтями на ногах</p>
-                </div>
-                <div class="single-service-area wow fadeInUp" data-wow-delay="800ms">
-                    <img src="img/core-img/s5.png" alt="">
-                    <h5>Френч</h5>
-                    <p>Совершенно новая формула нанесения френча</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="why-choose-us-area">
-        <div class="container">
-            <div class="info-block">
-                <div class="choose-us-thumbnail">
-                    <img src="img/bg-img/4.jpg" alt="" class="choose-us-img">
-                </div>
-                <div class="desc">
-                    <div class="section-heading">
-                        <h2>Почему именно я</h2>
-                        <p>Я - профессиональный мастер маникюра и я точно знаю, что вам нужно, вот несколько причин, почему вы должны выбрать именно меня:</p>
-                    </div>
-                    <div class="choose-us-content">
-                        <ul>
-                            <li>Выполнение не больше 2 часов</li>
-                            <li>Профессиональный сертифицированный мастер</li>
-                            <li>Щадящий прейскурант</li>
-                            <li>Бесплатная консультация</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="vm-portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading text-center">
-                        <h2>Мои работы</h2>
-                        <p>Здесь вы найдете всю сферу наших услуг и дизайн, который точно вам понравится</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="info-block">
-                <div class="portfolio-menu">
-                    <button class="btn active" data-filter="*">Всё</button>
-                    <button class="btn" data-filter="haircuts">Наращивание</button>
-                    <button class="btn" data-filter="dye">Аппаратный маникюр</button>
-                    <button class="btn" data-filter="shave">Френч</button>
-                    <button class="btn" data-filter="hairstyle">Комбинированный маникюр</button>
-                </div>
-            </div>
-            <div class="vm-portfolio-area">
-                <div class="vm-portfolio-item haircuts wow fadeInUp active" data-wow-delay="200ms" data-filter="haircuts">
-                    <div class="vm-portfolio-single-item">
-                        <img src="img/bg-img/5.jpg" alt="">
-                        <div class="overlay-text">
-                            <h4>Наращивание</h4>
-                            <p>Наращивание + маникюр</p>
-                        </div>
-                        <a href="img/bg-img/5.jpg" class="thumbnail-zoom"><i class="icon_search"></i></a>
-                    </div>
-                </div>
-                <div class="vm-portfolio-item dye wow fadeInUp active" data-wow-delay="300ms"data-filter="dye">
-                    <div class="vm-portfolio-single-item">
-                        <img src="img/bg-img/6.jpg" alt="">
-                        <div class="overlay-text">
-                            <h4>Маникюр</h4>
-                            <p>Аппаратный маникюр</p>
-                        </div>
-                        <a href="img/bg-img/6.jpg" class="thumbnail-zoom"><i class="icon_search"></i></a>
-                    </div>
-                </div>
-                <div class="vm-portfolio-item shave wow fadeInUp active" data-wow-delay="400ms" data-filter="shave">
-                    <div class="vm-portfolio-single-item">
-                        <img src="img/bg-img/7.jpg" alt="">
-                        <div class="overlay-text">
-                            <h4>Френч</h4>
-                            <p>Формула идеального френча</p>
-                        </div>
-                        <a href="img/bg-img/7.jpg" class="thumbnail-zoom"><i class="icon_search"></i></a>
-                    </div>
-                </div>
-                <div class="vm-portfolio-item hairstyle wow fadeInUp active" data-wow-delay="500ms" data-filter="hairstyle">
-                    <div class="vm-portfolio-single-item">
-                        <img src="img/bg-img/8.jpg" alt="">
-                        <div class="overlay-text">
-                            <h4>Комбинированный</h4>
-                            <p>Красивый</p>
-                        </div>
-                        <a href="img/bg-img/8.jpg" class="thumbnail-zoom"><i class="icon_search"></i></a>
-                    </div>
-                </div>
-                <div class="vm-portfolio-item dye wow fadeInUp active" data-wow-delay="600ms" data-filter="dye">
-                    <div class="vm-portfolio-single-item">
-                        <img src="img/bg-img/9.jpg" alt="">
-                        <div class="overlay-text">
-                            <h4>Наращивание + дизайн</h4>
-                            <p>Тоже красиво</p>
-                        </div>
-                        <a href="img/bg-img/9.jpg" class="thumbnail-zoom"><i class="icon_search"></i></a>
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <section class="vm-cta-area">
-        <div class="container">
-            <div class="info-block">
-                <h2>Сделай <br>свой выбор</h2>
-                <p>Мы дорожим каждым нашим клиентом, запишись к нам на маникюр и сама в этом убедишься!</p>
-                <div class="vm-btn-group">
-                    <a class="btn active">Забронировать</a>
-                    <a href="./contact.html" class="btn vm-btn">Контакты</a>
-                </div>
-            </div>
-        </div>
-        <div class="cta-thumbnail"></div>
-    </section>
-
-    <footer class="footer-area">
-        <div class="container">
-            <div class="info-block">
-                <div class="single-footer-widget">
-                    <a class="footer-logo"><img src="img/core-img/logo.png" alt=""></a>
-                    <p>Я - профессиональный мастер ногтей, и я точно знаю как придать стиля твоим прекрасным рукам!</p>
-                    <div class="copywrite-text">
-                    </div>
-                </div>
-                <div class="single-footer-widget">
-                    <h4 class="widget-title">Режим работы</h4>
-                    <div class="open-time">
-                        <p>Понедельник-Суббота: 12.00 - 21.00</p>
-                        <p>Воскресенье: выходной</p>
-                    </div>
-                    <div class="social-info">
-                        <a href="#" class="instagram"></a>
-                    </div>
-                </div>
-                <div class="single-footer-widget">
-                    <h4 class="widget-title">Контакты</h4>
-                    <div class="contact-address">
-                        <p>Телефон: +7 (999) 999-99-99</p>
-                        <p>E-mail: vm@nails.com</p>
-                        <p>Адрес: Ул. Светлая 106</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/default-assets/active.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 
 </body>
 </html>

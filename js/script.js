@@ -46,3 +46,15 @@ $('.portfolio-menu button.btn').on('click', function () {
         content.addClass('active');
     }
 });
+
+// Tab-lk
+$('.lk-block .info-block .panel span').click(function () {
+	var id = $(this).attr('data-lk'),
+		content = $('.lk-block .info-block .info .block[data-lk="' + id + '"]');
+
+	$('.lk-block .info-block .panel span.active').removeClass('active');
+	$(this).addClass('active');
+
+	$('.lk-block .info-block .info .block.active').removeClass('active');
+	content.addClass('active');
+});

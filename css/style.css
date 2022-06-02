@@ -48,6 +48,7 @@
 
 :root {
 	--bg: #ffffff;
+	--bgBrawn: #200F07;
 	--text: #252525;
 	--text-w: #ffffff;
 	--text-h: #bc9958;
@@ -57,6 +58,7 @@
 	--border-gray: #e5e5e5;
 	--p: #6e6e6e;
 	--bg-gray: #f6f9f9;
+	--bg-gray2: #F0F0F0;
 	--input: #D9D9D9;
 }
 
@@ -607,7 +609,8 @@ header {
 	color: var(--text-h);
 }
 
-.vm-portfolio .info-block .portfolio-menu .btn.active::before {
+.vm-portfolio .info-block .portfolio-menu .btn.active::before,
+.lk-block .info-block .panel span.active::before {
     width: 100%;
     height: 2px;
     background-color: var(--btn-hover);
@@ -616,6 +619,12 @@ header {
     left: 0%;
     z-index: 1;
     content: '';
+}
+
+.lk-block .info-block .panel span.active::before {
+	width: 60%;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .vm-cta-area {
@@ -860,7 +869,8 @@ footer .info-block .single-footer-widget {
 }
 
 .vm-contact-area .form-control:focus,
-.auth .info-block .block.formBlockMain form .formBlock input:focus {
+.auth .info-block .block.formBlockMain form .formBlock input:focus,
+.lk-block .info-block .info form .formBlock input:focus {
 	border-color: var(--btn-hover);
 	box-shadow: none;
 }
@@ -883,6 +893,23 @@ footer .info-block .single-footer-widget {
 
 .adt-page section {
 	padding: 0;
+}
+
+.auth {
+	position: relative;
+}
+
+.auth .backButtonMain {
+	display: block;
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	width: 20px;
+	height: 32px;
+	background-image: url('../img/arrowBack.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	cursor: pointer;
 }
 
 .auth .info-block {
@@ -927,22 +954,21 @@ footer .info-block .single-footer-widget {
 	justify-content: space-between;
 }
 
-.auth .info-block .block.formBlockMain form {
+.auth .info-block .block.formBlockMain .formBlock {
 	width: 70%;
 	margin: 0 auto;
 }
 
 .auth .info-block .block.formBlockMain form .formBlock.iconAuth {
 	position: relative;
-	width: 100%;
 }
 
 .auth .info-block .block.formBlockMain form .formBlock {
-	width: 100%;
 	margin-bottom: 32px;
 }
 
-.auth .info-block .block.formBlockMain form .formBlock input {
+.auth .info-block .block.formBlockMain form .formBlock input,
+.lk-block .info-block .info form .formBlock input {
 	border: 0;
 	border-radius: 0;
 	border-bottom: 2px solid var(--input);
@@ -965,24 +991,30 @@ footer .info-block .single-footer-widget {
 .auth .info-block .block.formBlockMain form .formBlock.iconAuth:nth-of-type(1)::before {
 	background-image: url('../img/mailAuth.svg');
 }
-.auth .info-block .block.formBlockMain form .formBlock.iconAuth:nth-of-type(2)::before {
+.auth .info-block .block.formBlockMain form .formBlock.iconAuth:nth-of-type(2)::before,
+.auth.reg .info-block .block.formBlockMain form .formBlock.iconAuth:nth-of-type(3)::before,
+.auth.reg .info-block .block.formBlockMain form .formBlock.iconAuth:nth-of-type(4)::before {
 	background-image: url('../img/password.svg');
+}
+.auth.reg .info-block .block.formBlockMain form .formBlock.iconAuth:nth-of-type(2)::before {
+	background-image: url('../img/user.svg');
 }
 
 .auth .info-block .block.formBlockMain form .formBlock #checkForm {
 	margin-right: 8px;
 }
 
-.auth .info-block .block.formBlockMain form .btn-send .btn {
+.auth .info-block .block.formBlockMain form .btn-send .btn,
+.lk-block .info-block .info form .btn.btn-lk {
 	font-family: 'Muller', 'Arial', sans-serif;
 	text-transform: none;
 	font-size: 20px;
 	font-weight: 500;
 	padding: 8px 80px;
 	margin-top: 32px;
-	background-color: var(--border);
-	border-color: var(--border);
-	color: var(--border-gray);
+	background-color: var(--bgBrawn);
+	border-color: var(--bgBrawn);
+	color: var(--text-w);
 }
 
 .auth .info-block .block:last-of-type {
@@ -990,5 +1022,201 @@ footer .info-block .single-footer-widget {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-	background-color: #200f07;
+	background-color: var(--bgBrawn);
+}
+
+.auth.reg .info-block .block:last-of-type {
+	background-image: url(../img/bg-img/ctaWhite.png);
+}
+
+.auth.forgetPass .info-block .block.formBlockMain {
+    justify-content: center;
+}
+
+.auth.forgetPass .info-block .block.formBlockMain h1 {
+	font-weight: 800;
+	font-size: 50px;
+	font-family: 'Muller', 'Arial', sans-serif;
+}
+
+.lk-block {
+	margin: 110px 0;
+	padding: 0;
+}
+
+.lk-block .info-block {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+
+.lk-block .info-block .panel {
+	margin: 0 auto;
+	background-color: var(--bg-gray2);
+	border-radius: 21px;
+	padding: 28px;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 28px;
+}
+
+.lk-block .info-block .panel span {
+	margin: 0 50px;
+	position: relative;
+	display: block;
+	padding: 5px 0;
+	cursor: pointer;
+}
+
+.lk-block .info-block .info {
+	width: 100%;
+	box-shadow: 0px 0px 65px rgba(0, 0, 0, 0.2);
+	border-radius: 41px;
+	min-height: 810px;
+}
+
+.lk-block .info-block .info form .formBlock input {
+	padding: 3px 0;
+	font-weight: bold;
+}
+
+.lk-block .info-block .info form #imgFileLk {
+	display: none;
+}
+
+.lk-block .info-block .info form .infoLkBlock .img .imgUser {
+	width: 326px;
+	height: 326px;
+	border-radius: 50%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.lk-block .info-block .info form .infoLkBlock .img .imgUser img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.lk-block .info-block .info form .infoLkBlock .img {
+	display: flex;
+	flex-direction: column;
+}
+
+.lk-block .info-block .info form .infoLkBlock .img div {
+	text-align: center;
+}
+
+.lk-block .info-block .info form .infoLkBlock {
+	display: flex;
+	justify-content: space-between;
+}
+
+.lk-block .info-block .info form .infoLkBlock .img .btn.btn-lk {
+	margin-bottom: 13px;
+	min-width: auto;
+	padding: 8px 50px;
+	text-transform: uppercase;
+}
+
+.lk-block .info-block .info form .btn {
+	font-family: 'Muller', 'Arial', sans-serif;
+	font-weight: 800;
+}
+
+.lk-block .info-block .info form .btn-send {
+	text-align: center;
+}
+
+.lk-block .info-block .info form label {
+	color: var(--p);
+	font-weight: 300;
+}
+
+.lk-block .info-block .info form .infoUser .col-lk {
+	margin-left: 35px;
+	width: calc(50% - 35px);
+}
+
+.lk-block .info-block .info form .infoUser .formBlock {
+	margin-bottom: 24px;
+}
+
+.lk-block .info-block .info form .infoUser {
+	display: flex;
+	justify-content: space-between;
+    flex-wrap: wrap;
+	flex: 1;
+	margin-left: 75px;
+}
+
+.lk-block .info-block .info .block {
+	display: none;
+	padding: 157px 120px 90px;
+}
+.lk-block .info-block .info .block.active {
+	display: block;
+}
+
+.response {
+	font-size: 14px;
+	margin-top: 8px;
+}
+
+.lk-block .info-block .block.booking {
+	padding: 62px 75px;
+}
+
+.lk-block .info-block .block.booking .block-booking h4 {
+	font-family: 'Muller', 'Arial', sans-serif;
+	margin-bottom: 19px;
+	text-align: center;
+}
+
+.lk-block .info-block .block.booking .block-booking.active-booking .info-block-booking {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.lk-block .info-block .block.booking .block-booking .info-block-booking .blockTextBooking {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 27px 34px;
+	background-color: var(--bg-gray2);
+	border-radius: 17px;
+	margin-bottom: 19px;
+}
+
+.lk-block .info-block .block.booking .block-booking.active-booking .info-block-booking .blockTextBooking {
+	background-color: var(--bgBrawn);
+	color: var(--text-w);
+}
+
+.lk-block .info-block .block.booking .block-booking.active-booking .info-block-booking .blockTextBooking:last-of-type {
+	margin-bottom: 0;
+}
+
+.lk-block .info-block .block.booking .block-booking.active-booking .info-block-booking .blockTextBooking span {
+	display: block;
+}
+
+.lk-block .info-block .block.booking .block-booking .info-block-booking .blockTextBooking span:nth-of-type(2) {
+	margin: 0 16px;
+	flex: 1;
+	text-align: center;
+}
+
+.lk-block .info-block .block.booking .block-booking .info-block-booking .blockTextBooking span:last-of-type {
+	text-align: right;
+}
+
+.lk-block .info-block .block.booking .block-booking.active-booking {
+	margin-bottom: 46px;
+}
+
+.lk-block .info-block .block.booking .block-booking .info-block-booking .blockTextBooking span:not(:nth-of-type(2)) {
+	flex: 3;
 }
