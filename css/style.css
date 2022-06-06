@@ -873,7 +873,8 @@ footer .info-block .single-footer-widget {
 .auth .info-block .block.formBlockMain form .formBlock input:focus,
 .lk-block .info-block .info form .formBlock input:focus,
 .modal .modal-body .form .infoLkBlock input:focus,
-.modal .modal-body .form .infoLkBlock select:focus {
+.modal .modal-body .form .infoLkBlock select:focus,
+.btn-close:focus {
 	border-color: var(--btn-hover);
 	box-shadow: none;
 }
@@ -1229,6 +1230,9 @@ footer .info-block .single-footer-widget {
 	flex: 3;
 }
 
+.modal-header {
+	border: 0;
+}
 .modal .modal-dialog {
 	max-width: 556px;
 }
@@ -1240,6 +1244,7 @@ footer .info-block .single-footer-widget {
 	position: absolute;
 	top: 30px;
 	right: 30px;
+	z-index: 50;
 }
 .modal .modal-body {
 	font-family: 'Muller', 'Arial', sans-serif;

@@ -1,3 +1,22 @@
+@media screen and (max-width: 1440px) {
+	.auth .info-block .block.formBlockMain .formBlock {
+		width: 50%;
+		margin: 0 auto;
+	}
+	.auth .info-block .block.formBlockMain {
+		margin: 0 auto;
+	}
+	.auth .info-block .block:nth-of-type(2) {
+		display: none;
+	}
+	.auth .info-block .block.formBlockMain {
+		width: 100%;
+	}
+	.auth .info-block .block {
+		flex: none;
+	}
+}
+
 @media screen and (max-width: 1199px) {
 	.container {
 		width: 960px;
@@ -25,7 +44,8 @@
 	.about-us-content h3 {
 		font-size: 24px;
 	}
-	.section-heading h2 {
+	.section-heading h2,
+	.single--service--item .service-text h2 {
 		font-size: 36px;
 	}
 	.single-service-area h5 {
@@ -47,6 +67,50 @@
 	footer .info-block .single-footer-widget {
 		flex: 0 0 30%;
 		max-width: 30%;
+	}
+	.vm-service-area-service .single--service--item .service-text {
+		width: 455px;
+	}
+	.vm-service-area-service .single--service--item:nth-of-type(1) .service-thumbnail {
+		background-position: 300px center;
+	}
+	.vm-service-area-service .single--service--item:nth-of-type(2) .service-thumbnail {
+		background-position: -200px center;
+	}
+	.vm-service-area-service .single--service--item .service-thumbnail {
+		background-size: cover;
+	}
+	.lk-block .info-block .info form .infoLkBlock {
+		flex-wrap: wrap;
+	}
+	.lk-block .info-block .info form .infoLkBlock .img,
+	.lk-block .info-block .info form .infoUser {
+		width: 100%;
+	}
+	.lk-block .info-block .info form .infoLkBlock .img {
+		order: 2;
+		align-items: center;
+		margin-top: 30px;
+	}
+	.lk-block .info-block .info form .infoUser {
+		margin-left: 0;
+		order: 1;
+	}
+	.lk-block .info-block .info .block {
+		padding: 100px 50px;
+	}
+	.lk-block .info-block .info form .infoLkBlock .img .btn.btn-lk,
+	.lk-block .info-block .info form .infoLkBlock .img div {
+		width: 100%;
+	}
+	.lk-block .info-block .info form .btn.btn-lk, .btn.btn-lk {
+		margin-top: 50px;
+	}
+}
+
+@media screen and (max-width: 1020px) {
+	.vm-service-area-service .single--service--item:nth-of-type(1) .service-thumbnail {
+		background-position: 600% center;
 	}
 }
 
@@ -127,16 +191,284 @@
 	.vm-cta-area .info-block {
 		width: 60%;
 	}
+	.vm-service-area-service .single--service--item .service-text {
+		width: 345px;
+	}
+	.breadcrumb-content h2 {
+		font-size: 48px;
+	}
+	.single--service--item .service-text h2 {
+		font-size: 30px;
+	}
+	.vm-service-area-service .single--service--item .service-text {
+		width: auto;
+		margin: 0 auto;
+		padding: 100px 0;
+	}
+	.vm-service-area-service .single--service--item .service-thumbnail {
+		background-size: cover;
+	}
+	.vm-service-area-service .single--service--item:nth-of-type(1) .service-thumbnail {
+		background-position: 300px center;
+	}
+	.vm-service-area-service .single--service--item:nth-of-type(2) .service-thumbnail {
+		background-position: -200px center;
+	}
+	.contact-information-area .info-block {
+		flex-wrap: wrap;
+	}
+	.contact-information-area .info-block .single-contact-information {
+		width: calc(50% - 20px);
+		flex: none;
+		margin: 20px 10px;
+	}
+	.auth .info-block .block.formBlockMain .formBlock {
+		width: 70%;
+	}
+	.auth.forgetPass .info-block .block.formBlockMain h1 {
+		font-size: 35px;
+	}
+}
+
+@media screen and (max-width: 820px) {
+	.lk-block .info-block .block.booking .block-booking .info-block-booking .blockTextBooking {
+		flex-direction: column;
+		text-align: center;
+	}
+	.lk-block .info-block .block.booking .block-booking .info-block-booking .blockTextBooking span:last-of-type {
+		text-align: center;
+	}
+	.lk-block .info-block .block.booking .block-booking.active-booking .info-block-booking .blockTextBooking span {
+		margin: 5px 0;
+	}
+	.lk-block .info-block .panel {
+		width: 100%;
+	}
 }
 
 @media screen and (max-width: 768px) {
-	
+	h2 {
+		font-size: 36px;
+	}
+	.welcome-area-block {
+		height: 500px;
+	}
+	.vm-about-area .info-block .about-us-thumbnail {
+		width: 100%;
+		height: 100%;
+	}
+	.why-choose-us-area .info-block .choose-us-thumbnail {
+		height: 200px;
+	}
+	.why-choose-us-area .info-block .choose-us-thumbnail img {
+		object-fit: cover;
+	}
+	.why-choose-us-area .info-block .choose-us-thumbnail {
+		width: calc(100% - 10px);
+	}
+	.why-choose-us-area .info-block .choose-us-thumbnail:before {
+		right: -10px;
+		top: 10px;
+	}
+	.why-choose-us-area .info-block .desc {
+		margin-left: 10px;
+	}
+	.section-heading h2 {
+		font-size: 30px;
+	}
+	h4 {
+		font-size: 20px;
+	}
+	.vm-portfolio-single-item .overlay-text p {
+		font-size: 14px;
+		font-weight: 300;
+	}
+	.vm-cta-area .cta-thumbnail {
+		width: 100%;
+		opacity: .1;
+	}
+	.vm-cta-area .container {
+		position: relative;
+		z-index: 1;
+	}
+	.vm-cta-area .info-block .vm-btn-group .btn {
+		margin: 5px;
+	}
+	.vm-cta-area .info-block {
+		width: 100%;
+	}
+	footer .info-block .single-footer-widget {
+		flex: none;
+		max-width: calc(50% - 20px);
+		margin: 10px 10px 30px 10px;
+	}
+	.section-heading span {
+		font-size: 50px;
+	}
+	.vm-about-area .section-heading {
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+	.vm-service-area-service .single--service--item {
+		flex-wrap: wrap;
+	}
+	.vm-service-area-service .single--service--item .service-text {
+		width: 100%;
+		padding: 50px 0;
+	}
+	.vm-service-area-service .single--service--item .service-thumbnail {
+		background-position: center!important;
+		width: 100%;
+		height: 400px;
+	}
+	.vm-service-area-service .single--service--item:nth-of-type(2n) .service-thumbnail {
+		order: 2;
+	}
+	.vm-service-area-service .single--service--item .service-text {
+		width: 90%;
+	}
+	.breadcrumb-content h2 {
+		font-size: 36px;
+	}
+	.single--service--item .service-text h2 {
+		font-size: 24px;
+	}
+	.auth .info-block .block.formBlockMain .formBlock {
+		width: 100%;
+	}
+	.auth .info-block .block.formBlockMain form .btn-send .btn {
+		padding: 8px 10px;
+		width: 100%;
+	}
+	.auth .info-block .block.formBlockMain .formBlockMain {
+		width: 90%;
+	}
+	.lk-block .info-block .panel {
+		flex-direction: column;
+		font-size: 20px;
+		text-align: center;
+	}
+	.lk-block .info-block .panel span {
+		margin: 5px 50px;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.container {
+		width: 95%;
+	}
+	.welcome-area-block .info-block .welcome-content {
+		width: 100%;
+	}
+	.welcome-area-block .info-block img {
+		width: 100%;
+	}
+	.welcome-area-block {
+		height: 360px;
+	}
+	.vm-service-area .info-block .single-service-area {
+		padding: 25px 15px;
+	}
+	.auth .info-block .block.formBlockMain {
+		padding: 90px 60px;
+	}
+	.lk-block .info-block .info form .btn.btn-lk, .btn.btn-lk {
+		padding: 8px 30px;
+	}
+	.lk-block .info-block .info .block {
+		padding: 50px 30px;
+	}
+	.lk-block .info-block .info form .infoUser {
+		flex-direction: column;
+	}
+	.lk-block .info-block .info form .infoUser .col-lk {
+		width: 100%;
+		margin-left: 0;
+	}
 }
 
 @media screen and (max-width: 480px) {
+	.vm-service-area .info-block .single-service-area,
+	.vm-portfolio .vm-portfolio-area .vm-portfolio-item,
+	footer .info-block .single-footer-widget {
+		width: 100%;
+		max-width: none;
+	}
+	footer .info-block .single-footer-widget {
+		margin: 0;
+		margin-bottom: 50px;
+	}
+	footer .info-block .single-footer-widget:last-of-type {
+		margin-bottom: 0;
+	}
+	.welcome-area-block .info-block .welcome-content {
+		position: relative;
+		transform: none;
+		z-index: 10;
+		top: 0;
+		left: 0;
+	}
+	.welcome-area-block .info-block img {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.welcome-area-block {
+		height: auto;
+	}
+	.welcome-area-block .info-block {
+		padding: 50px 0;
+	}
+	.vm-service-area-service .single--service--item .service-thumbnail {
+		height: 300px;
+	}
+	.auth.forgetPass .info-block .block.formBlockMain h1 {
+		font-size: 30px;
+	}
+	.lk-block .info-block .info form .infoLkBlock .img .imgUser {
+		width: 230px;
+		height: 230px;
+	}
+	.lk-block .info-block .info form .infoLkBlock .img .btn.btn-lk {
+		margin-top: 20px;
+	}
+	.modal .modal-body {
+		padding: 48px 50px;
+	}
+	.modal .modal-body .text span {
+		width: 100%;
+	}
+}
 
+@media screen and (max-width: 380px) {
+	.contact-information-area .info-block .single-contact-information {
+		width: 100%;
+		margin: 0;
+		margin-bottom: 30px;
+	}
+	.contact-information-area .info-block .single-contact-information:last-of-type {
+		margin-bottom: 0;
+	}
+	.auth .info-block .block.formBlockMain {
+		padding: 90px 0;
+		width: 90%;
+	}
+	.modal .modal-body {
+		padding: 48px 30px;
+	}
 }
 
 @media screen and (max-width: 360px) {
-	
+	.container {
+		width: 100%;
+	}
+	.section-heading span {
+		font-size: 40px;
+	}
+	.auth.forgetPass .info-block .block.formBlockMain h1 {
+		font-size: 25px;
+	}
+	.lk-block .info-block .info form .infoLkBlock .img .btn.btn-lk {
+		text-transform: none;
+	}
 }
